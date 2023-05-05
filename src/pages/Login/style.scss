@@ -1,0 +1,36 @@
+.background {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../util/img/background.jpg');
+}
+
+.login {
+    width: 50em;
+    height: 30em;
+    background-color: rgba(25, 25, 25, 0.746);
+    border-radius: 14px;
+
+    .title {
+        margin-top: 30px;
+        color: white ;
+    }
+    .mb-3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .form-floating {
+            width: 70%;
+        }
+    }
+}
+
+.divBtn {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
