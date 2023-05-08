@@ -1,16 +1,15 @@
+import './Menu.scss';
+
 export default function Menu() {
-    return (
-        <>
-            <aside>
-                <section>
-                    <div>
-
-                    </div>
-                </section>
-                <section>
-
-                </section>
-            </aside>
-        </>
-    )
+    return (<>
+        <div className="container">
+            <div className="row">
+                <div className="col-12">
+                    <nav>
+                        Menu
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </>)
 }

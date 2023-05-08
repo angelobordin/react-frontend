@@ -1,13 +1,13 @@
-import './Main.scss';
+import './Header.scss';
 
-export default function Main() {
+export default function Header() {
     return (<>
         <div className="container-fluid">
             <div className="row">
                 <div className="col-12">
-                    <main>
-                        Content
-                    </main>
+                    <header>
+                        Header
+                    </header>
                 </div>
             </div>
         </div>
