@@ -1,7 +1,7 @@
 import './Login.scss';
 import { useState } from 'react';
 import axios from 'axios';
-import { getSessionStorage, setSessionStorage } from '../../util/functions/SessionStorage';
+import { setSessionStorage } from '../../util/functions/SessionStorage';
 
 interface IUserDataLogged {
     temporaryToken: string;
@@ -13,14 +13,8 @@ interface IUserDataLogged {
 }
 
 export default function Login() {
-    let userToken = getSessionStorage('token');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [userLogged, setUserLogged] = useState(userToken != null);
-
-    if (userLogged) {
-        window.location.href = 'home';
-    };
 
     const logUser = (e: React.FormEvent) => {
         e.preventDefault();
@@ -31,7 +25,6 @@ export default function Login() {
             setSessionStorage('userName', userDataLogged.userData.name);
             setSessionStorage('userCompany', userDataLogged.userData.company_id.toString());
             setSessionStorage('userId', userDataLogged.userData.id.toString());
-            setUserLogged(true);
             setEmail('');
             setPassword('');
             window.location.href = 'home';
