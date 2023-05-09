@@ -1,6 +1,40 @@
-nav {
+.menu {
     background-color: green;
-    height: 90vh;
-    width: 30vw;
-    margin-left: 0;
+    height: 92.6vh;
+    width: 15vw;
+    flex-wrap: wrap;
 }
+
+.menuLista {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    display: grid;
+    font-size: 1.2em;
+}
+
+.menuItem {
+    display: inline;
+    position: relative;
+    padding: 0.5vw 1vw;
+}
+
+
+.itemName {
+    text-decoration: none;
+    display: inline-block;
+    transition: .3s;
+    padding: 10px;
+}
+
+.menuOpcoes {
+    display: none;
+}
+
+// .menuItem:hover {
+//     background-color: gray;
+// }
+
+// .menuItem:hover .menuOpcoes {
+//     display: block;
+// }
