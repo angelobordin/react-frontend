@@ -38,29 +38,69 @@ header {
     justify-content: end;
 
     .second {
+        cursor: pointer;
         padding: 10px;
         margin-right: 7%;
-        display: flex;
-        align-items: center;
-        cursor: pointer;
+        transition: 1s;
+        position: relative;
 
-        .person {
-            margin: 10px;
+        .userdata {
+            display: flex;
+            align-items: center;
+
+            .person {
+                margin: 10px;
+            }
+
+            .user-name {
+                margin: 0 10px;
+                background-image: linear-gradient(to right, rgb(255, 115, 0), rgb(255, 255, 255));
+                background-position: left bottom;
+                background-repeat: no-repeat;
+                background-size: 0% 5px;
+                transition: background-size 0.3s ease-in-out;
+            }
         }
 
-        .user-name {
-            margin: 0 10px;
-            background-image: linear-gradient(to right, rgb(255, 115, 0), rgb(255, 255, 255));
-            background-position: left bottom;
-            background-repeat: no-repeat;
-            background-size: 0% 5px;
-            transition: background-size 0.3s ease-in-out;
+        .menu {
+            left: 0;
+            width: 100%;
+            margin-top: 1vh;
+            background-color: #5c595688;
+            list-style-type: none;
+            position: absolute;
+            display: none;
+
+            li {
+                width: 100%;
+                display: inline-block;
+                align-items: center;
+                padding: 1vh 0;
+
+                a {
+                    margin-left: 1vw;
+                    display: inline-block;
+                }
+            }
+
+            li:hover {
+                border-radius: 14px;
+                background-color: #5c59563f;
+            }
         }
     }
 
     .second:hover {
-        .user-name {
-            background-size: 100% 2px;
+        background-color: #5c595688;
+
+        .userdata {
+            .user-name {
+                background-size: 100% 2px;
+            }
+        }
+
+        .menu {
+            display: block;
         }
     }
 }

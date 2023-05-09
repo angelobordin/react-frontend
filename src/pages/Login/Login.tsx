@@ -1,11 +1,11 @@
+import axios from 'axios';
 import './Login.scss';
 import { useState } from 'react';
-import axios from 'axios';
 import { setSessionStorage } from '../../util/functions/SessionStorage';
 
 interface IUserDataLogged {
     temporaryToken: string;
-    userData: {
+    user: {
         company_id: number;
         id: number;
         name: string;
@@ -22,9 +22,9 @@ export default function Login() {
             const userDataLogged: IUserDataLogged = res.data.data;
             if (!userDataLogged) throw new Error(res.data);
             setSessionStorage('token', `Bearer ${userDataLogged.temporaryToken}`);
-            setSessionStorage('userName', userDataLogged.userData.name);
-            setSessionStorage('userCompany', userDataLogged.userData.company_id.toString());
-            setSessionStorage('userId', userDataLogged.userData.id.toString());
+            setSessionStorage('userName', userDataLogged.user.name);
+            setSessionStorage('userCompany', userDataLogged.user.company_id.toString());
+            setSessionStorage('userId', userDataLogged.user.id.toString());
             setEmail('');
             setPassword('');
             window.location.href = 'home';
